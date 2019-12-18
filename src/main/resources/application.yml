@@ -1,0 +1,17 @@
+# data source
+spring:
+  datasource:
+    # master data source
+    master:
+      # jdbc-url: jdbc:mysql://192.168.1.67:3306/dba?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+      jdbc-url: jdbc:h2:mem:master
+      username: root
+      password: 123456
+      # driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: org.h2.Driver
+    # slaver data source
+    slaver:
+      jdbc-url: jdbc:h2:mem:slaver
+      username: root
+      password: 123456
+      driver-class-name: org.h2.Driver
