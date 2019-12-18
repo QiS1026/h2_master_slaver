@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qis.h2_master_slaver.mapper.PersonMapper">
 
+    <!-- 插入 -->
     <insert id="insert" parameterType="com.qis.h2_master_slaver.entity.Person">
         insert into person
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -22,6 +23,7 @@
         </trim>
     </insert>
 
+    <!-- 更新 -->
     <update id="update" parameterType="com.qis.h2_master_slaver.entity.Person">
         update person
         <set>
@@ -32,14 +34,17 @@
         where id = #{id,jdbcType=INTEGER}
     </update>
 
+    <!-- 查询全部 -->
     <select id="selectAll" resultType="com.qis.h2_master_slaver.entity.Person">
         select * from person order by id
     </select>
 
+    <!-- 删除 -->
     <delete id="delete">
         delete from person where id=#{id}
     </delete>
 
+    <!-- 创建表 -->
     <insert id="createTable">
         DROP TABLE IF EXISTS person;
         CREATE TABLE person  (

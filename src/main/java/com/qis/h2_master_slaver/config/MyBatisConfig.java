@@ -35,6 +35,12 @@ public class MyBatisConfig {
         return sqlSessionFactoryBean.getObject();
     }
 
+    /**
+     * @descn 事务管理
+     * @return org.springframework.transaction.PlatformTransactionManager
+     * @author qis
+     * @date 2019/12/18 17:53
+     */
     @Bean
     public PlatformTransactionManager platformTransactionManager() {
         return new DataSourceTransactionManager(dynamicDataSource);

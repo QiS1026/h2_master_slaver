@@ -6,5 +6,5 @@ package com.qis.h2_master_slaver.enums;
  * @date 2019/12/18 11:02
  */
 public enum DBType {
-    master, slaver;
+    master, slaver
 }

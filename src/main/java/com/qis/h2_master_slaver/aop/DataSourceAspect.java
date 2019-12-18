@@ -26,7 +26,7 @@ public class DataSourceAspect {
     }
 
     /**
-     * @descn h2_master_slaver.service中的以 get、find、query 开头的方法使用从数据源
+     * @descn h2_master_slaver.service中的以 slaver 开头的方法使用从数据源
      * @return void
      * @author qis
      * @date 2019/12/18 12:13
@@ -37,7 +37,7 @@ public class DataSourceAspect {
     }
 
     /**
-     * @descn h2_master_slaver.service中的以 get、find、query 开头的方法使用主数据源
+     * @descn h2_master_slaver.service中的以 master 开头的方法使用主数据源
      * @return void
      * @author qis
      * @date 2019/12/18 12:13
